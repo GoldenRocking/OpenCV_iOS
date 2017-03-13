@@ -17,6 +17,10 @@
 		ECB2B5F01E764CE700EAE841 /* timg.png in Resources */ = {isa = PBXBuildFile; fileRef = ECB2B5EF1E764CE700EAE841 /* timg.png */; };
 		ECB2B5F61E764D0000EAE841 /* cvprocess.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECB2B5F31E764D0000EAE841 /* cvprocess.mm */; };
 		ECB2B5F71E764D0000EAE841 /* IOSLinkViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECB2B5F51E764D0000EAE841 /* IOSLinkViewController.mm */; };
+		ECB2B5FE1E76A92400EAE841 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB2B5FD1E76A92400EAE841 /* CoreViewController.m */; };
+		ECB2B6011E76AB9B00EAE841 /* ImageAddViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECB2B6001E76AB9B00EAE841 /* ImageAddViewController.mm */; };
+		ECB2B6031E76AEB600EAE841 /* 001.png in Resources */ = {isa = PBXBuildFile; fileRef = ECB2B6021E76AEB600EAE841 /* 001.png */; };
+		ECB2B6051E76AEBC00EAE841 /* 0001.png in Resources */ = {isa = PBXBuildFile; fileRef = ECB2B6041E76AEBC00EAE841 /* 0001.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,12 @@
 		ECB2B5F31E764D0000EAE841 /* cvprocess.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = cvprocess.mm; sourceTree = "<group>"; };
 		ECB2B5F41E764D0000EAE841 /* IOSLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSLinkViewController.h; sourceTree = "<group>"; };
 		ECB2B5F51E764D0000EAE841 /* IOSLinkViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IOSLinkViewController.mm; sourceTree = "<group>"; };
+		ECB2B5FC1E76A92400EAE841 /* CoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
+		ECB2B5FD1E76A92400EAE841 /* CoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreViewController.m; sourceTree = "<group>"; };
+		ECB2B5FF1E76AB9B00EAE841 /* ImageAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAddViewController.h; sourceTree = "<group>"; };
+		ECB2B6001E76AB9B00EAE841 /* ImageAddViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageAddViewController.mm; sourceTree = "<group>"; };
+		ECB2B6021E76AEB600EAE841 /* 001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 001.png; sourceTree = "<group>"; };
+		ECB2B6041E76AEBC00EAE841 /* 0001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0001.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,16 +80,14 @@
 		ECB2B5D51E764CCB00EAE841 /* opencv_ios */ = {
 			isa = PBXGroup;
 			children = (
+				ECB2B5F81E765BC800EAE841 /* images */,
+				ECB2B5FA1E76A52B00EAE841 /* tools */,
+				ECB2B5F91E76A50E00EAE841 /* controls */,
 				ECB2B5D91E764CCB00EAE841 /* AppDelegate.h */,
 				ECB2B5DA1E764CCB00EAE841 /* AppDelegate.m */,
 				ECB2B5DC1E764CCB00EAE841 /* ViewController.h */,
 				ECB2B5DD1E764CCB00EAE841 /* ViewController.mm */,
-				ECB2B5F21E764D0000EAE841 /* cvprocess.h */,
-				ECB2B5F31E764D0000EAE841 /* cvprocess.mm */,
-				ECB2B5F41E764D0000EAE841 /* IOSLinkViewController.h */,
-				ECB2B5F51E764D0000EAE841 /* IOSLinkViewController.mm */,
 				ECB2B5F11E764CEF00EAE841 /* PrefixHeader.pch */,
-				ECB2B5EF1E764CE700EAE841 /* timg.png */,
 				ECB2B5ED1E764CDD00EAE841 /* opencv2.framework */,
 				ECB2B5DF1E764CCB00EAE841 /* Main.storyboard */,
 				ECB2B5E21E764CCB00EAE841 /* Assets.xcassets */,
@@ -96,6 +104,46 @@
 				ECB2B5D71E764CCB00EAE841 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECB2B5F81E765BC800EAE841 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				ECB2B6041E76AEBC00EAE841 /* 0001.png */,
+				ECB2B6021E76AEB600EAE841 /* 001.png */,
+				ECB2B5EF1E764CE700EAE841 /* timg.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		ECB2B5F91E76A50E00EAE841 /* controls */ = {
+			isa = PBXGroup;
+			children = (
+				ECB2B5FB1E76A8DA00EAE841 /* coremodel/function */,
+				ECB2B5F41E764D0000EAE841 /* IOSLinkViewController.h */,
+				ECB2B5F51E764D0000EAE841 /* IOSLinkViewController.mm */,
+			);
+			name = controls;
+			sourceTree = "<group>";
+		};
+		ECB2B5FA1E76A52B00EAE841 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				ECB2B5F21E764D0000EAE841 /* cvprocess.h */,
+				ECB2B5F31E764D0000EAE841 /* cvprocess.mm */,
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
+		ECB2B5FB1E76A8DA00EAE841 /* coremodel/function */ = {
+			isa = PBXGroup;
+			children = (
+				ECB2B5FC1E76A92400EAE841 /* CoreViewController.h */,
+				ECB2B5FD1E76A92400EAE841 /* CoreViewController.m */,
+				ECB2B5FF1E76AB9B00EAE841 /* ImageAddViewController.h */,
+				ECB2B6001E76AB9B00EAE841 /* ImageAddViewController.mm */,
+			);
+			name = coremodel/function;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,10 +204,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB2B6051E76AEBC00EAE841 /* 0001.png in Resources */,
 				ECB2B5F01E764CE700EAE841 /* timg.png in Resources */,
 				ECB2B5E61E764CCB00EAE841 /* LaunchScreen.storyboard in Resources */,
 				ECB2B5E31E764CCB00EAE841 /* Assets.xcassets in Resources */,
 				ECB2B5E11E764CCB00EAE841 /* Main.storyboard in Resources */,
+				ECB2B6031E76AEB600EAE841 /* 001.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,10 +221,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECB2B5F71E764D0000EAE841 /* IOSLinkViewController.mm in Sources */,
+				ECB2B5FE1E76A92400EAE841 /* CoreViewController.m in Sources */,
 				ECB2B5F61E764D0000EAE841 /* cvprocess.mm in Sources */,
 				ECB2B5DE1E764CCB00EAE841 /* ViewController.mm in Sources */,
 				ECB2B5DB1E764CCB00EAE841 /* AppDelegate.m in Sources */,
 				ECB2B5D81E764CCB00EAE841 /* main.m in Sources */,
+				ECB2B6011E76AB9B00EAE841 /* ImageAddViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +391,7 @@
 				ECB2B5EC1E764CCB00EAE841 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

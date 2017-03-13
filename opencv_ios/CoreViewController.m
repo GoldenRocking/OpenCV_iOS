@@ -1,34 +1,34 @@
 //
-//  ViewController.m
+//  CoreViewController.m
 //  opencv_ios
 //
 //  Created by guoruiqing on 2017/3/13.
 //  Copyright © 2017年 xhhl. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "IOSLinkViewController.h"
 #import "CoreViewController.h"
+#import "ImageAddViewController.h"
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface CoreViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
-@implementation ViewController
+@implementation CoreViewController
 {
   @private
     NSMutableArray *viewArray;
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    [self.navigationController.navigationBar setTranslucent:NO];
-    self.title = @"OpenCV Learn";
+    // Do any additional setup after loading the view.
+    
+    self.title = @"Core Function";
     [self.navigationController.navigationBar setBarTintColor:[UIColor purpleColor]];
     
-    viewArray = [NSMutableArray arrayWithObjects:@"1.在ios平台的调用",@"2.core模块，核心功能", nil];
-   
+    viewArray = [NSMutableArray arrayWithObjects:@"1.使用opencv对两幅图求和",@"2.改变图像的对比度和亮度",@"3.基本绘图",@"4.绘制文字", nil];
+    
     
     UITableView *tableView=[[UITableView alloc]init];
     
@@ -79,43 +79,45 @@
     switch (indexPath.row)
     {
         case 0:
-            {
+        {
+            ImageAddViewController *viewC = [[ImageAddViewController alloc]init];
+            [self.navigationController pushViewController:viewC animated:YES];
             
-               IOSLinkViewController *viewC = [[IOSLinkViewController alloc]init];
-               [self.navigationController pushViewController:viewC animated:YES];
-               
-             
-            }
+        }
             
             break;
             
         case 1:
-            {
+        {
             
-                CoreViewController *viewC = [[CoreViewController alloc]init];
-                [self.navigationController pushViewController:viewC animated:YES];
-                [tableView deselectRowAtIndexPath:indexPath animated:YES];
             
-            }
+            
+        }
             
             break;
             
         default:
             break;
-        
+            
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 
-
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
