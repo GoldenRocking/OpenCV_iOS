@@ -25,13 +25,20 @@ using namespace cv;
     
     double alpha = 0.7;
     double beta = 1 - alpha;
-    Mat dst;
-    addWeighted(src1, alpha, src2, beta, 0.0, dst);
+    int x = 100;
+    int y = 150;
+    
+    //设置ROI区域
+    Mat roi=src1(cvRect(x,y,400,300));
+    Mat roi2=src2(cvRect(0,0,400,300));
     
     
-    UIImage *image = [cvprocess UIImageFromCVMat:dst];
+    addWeighted(roi, alpha, roi2, beta, 0.0, src1);
+    
+    UIImage *image = [cvprocess UIImageFromCVMat:src1];
     UIImageView *imview = [[UIImageView alloc]initWithImage:image];
     imview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    imview.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:imview];
 
 }
