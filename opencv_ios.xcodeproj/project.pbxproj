@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC75CCAC1E7D7A3200ABA621 /* DrawingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC75CCAB1E7D7A3200ABA621 /* DrawingViewController.mm */; };
 		ECB2B5D81E764CCB00EAE841 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB2B5D71E764CCB00EAE841 /* main.m */; };
 		ECB2B5DB1E764CCB00EAE841 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB2B5DA1E764CCB00EAE841 /* AppDelegate.m */; };
 		ECB2B5DE1E764CCB00EAE841 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECB2B5DD1E764CCB00EAE841 /* ViewController.mm */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC75CCAA1E7D7A3200ABA621 /* DrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingViewController.h; sourceTree = "<group>"; };
+		EC75CCAB1E7D7A3200ABA621 /* DrawingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DrawingViewController.mm; sourceTree = "<group>"; };
 		ECB2B5D31E764CCB00EAE841 /* opencv_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = opencv_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB2B5D71E764CCB00EAE841 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECB2B5D91E764CCB00EAE841 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				ECB2B5FD1E76A92400EAE841 /* CoreViewController.m */,
 				ECB2B5FF1E76AB9B00EAE841 /* ImageAddViewController.h */,
 				ECB2B6001E76AB9B00EAE841 /* ImageAddViewController.mm */,
+				EC75CCAA1E7D7A3200ABA621 /* DrawingViewController.h */,
+				EC75CCAB1E7D7A3200ABA621 /* DrawingViewController.mm */,
 			);
 			name = coremodel/function;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				ECB2B5F61E764D0000EAE841 /* cvprocess.mm in Sources */,
 				ECB2B5DE1E764CCB00EAE841 /* ViewController.mm in Sources */,
 				ECB2B5DB1E764CCB00EAE841 /* AppDelegate.m in Sources */,
+				EC75CCAC1E7D7A3200ABA621 /* DrawingViewController.mm in Sources */,
 				ECB2B5D81E764CCB00EAE841 /* main.m in Sources */,
 				ECB2B6011E76AB9B00EAE841 /* ImageAddViewController.mm in Sources */,
 			);

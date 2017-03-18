@@ -8,6 +8,7 @@
 
 #import "CoreViewController.h"
 #import "ImageAddViewController.h"
+#import "DrawingViewController.h"
 
 @interface CoreViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -27,7 +28,8 @@
     self.title = @"Core Function";
     [self.navigationController.navigationBar setBarTintColor:[UIColor purpleColor]];
     
-    viewArray = [NSMutableArray arrayWithObjects:@"1.使用opencv对两幅图求和",@"2.改变图像的对比度和亮度",@"3.基本绘图",@"4.绘制文字", nil];
+    
+    viewArray = [NSMutableArray arrayWithObjects:@"1.使用opencv对两幅图求和",@"2.基本绘图",@"3.绘制文字", nil];
     
     
     UITableView *tableView=[[UITableView alloc]init];
@@ -89,12 +91,21 @@
             
         case 1:
         {
+            DrawingViewController *viewD = [[DrawingViewController alloc]init];
+            [self.navigationController pushViewController:viewD animated:YES];
             
             
             
         }
             
             break;
+        case 2:
+        {
+                       
+        }
+            
+            break;
+
             
         default:
             break;
