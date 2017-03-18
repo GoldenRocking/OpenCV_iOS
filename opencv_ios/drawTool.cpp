@@ -9,7 +9,7 @@
 #include "drawTool.hpp"
 
 
-void MyEllipse(Mat img,double angle)
+void MyEllipse(Mat img,double angle,int w)
 {
     int thickness = 2;
     int lineType = 8;
@@ -39,7 +39,7 @@ void MyFilledCircle(Mat img,cv::Point center)
                lineType );
 }
 
-void MyPolygon( Mat img )
+void MyPolygon( Mat img,int w )
 {
     int lineType = 8;
     

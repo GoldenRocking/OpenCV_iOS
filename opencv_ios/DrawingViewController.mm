@@ -17,8 +17,7 @@
 @implementation DrawingViewController
 using namespace cv;
 
-
-
+const int w = 300;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,10 +30,10 @@ using namespace cv;
     /// 1. 画一个简单的原子。
     
     /// 1.a. 创建椭圆
-    MyEllipse(atom_image, 90);
-    MyEllipse(atom_image, 0);
-    MyEllipse(atom_image, 45);
-    MyEllipse(atom_image, -45);
+    MyEllipse(atom_image, 90,w);
+    MyEllipse(atom_image, 0,w);
+    MyEllipse(atom_image, 45,w);
+    MyEllipse(atom_image, -45,w);
 
     /// 1.b. 创建圆
     MyFilledCircle( atom_image, cv::Point( w/2.0, w/2.0) );
@@ -48,7 +47,7 @@ using namespace cv;
     /// 2. 画一个赌棍
     
     /// 2.a. 创建一个凸多边形
-    MyPolygon( rook_image );
+    MyPolygon( rook_image ,w);
     
     /// 2.b. 创建矩形
     rectangle( rook_image,
