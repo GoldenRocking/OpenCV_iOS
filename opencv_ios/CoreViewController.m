@@ -9,6 +9,7 @@
 #import "CoreViewController.h"
 #import "ImageAddViewController.h"
 #import "DrawingViewController.h"
+#import "TextViewController.h"
 
 @interface CoreViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -95,12 +96,13 @@
             [self.navigationController pushViewController:viewD animated:YES];
             
             
-            
         }
             
             break;
         case 2:
         {
+            TextViewController *viewT = [[TextViewController alloc]init];
+            [self.navigationController pushViewController:viewT animated:YES];
                        
         }
             
