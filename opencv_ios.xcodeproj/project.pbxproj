@@ -10,6 +10,9 @@
 		EC75CCAC1E7D7A3200ABA621 /* DrawingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC75CCAB1E7D7A3200ABA621 /* DrawingViewController.mm */; };
 		EC75CCAF1E7D905C00ABA621 /* drawTool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC75CCAD1E7D905C00ABA621 /* drawTool.cpp */; };
 		EC75CCB21E7E5E9000ABA621 /* TextViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC75CCB11E7E5E9000ABA621 /* TextViewController.mm */; };
+		EC75CCB61E80155700ABA621 /* SmoothViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC75CCB51E80155700ABA621 /* SmoothViewController.mm */; };
+		EC75CCB91E801FD700ABA621 /* ProcessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC75CCB81E801FD700ABA621 /* ProcessViewController.m */; };
+		EC75CCBC1E8028E000ABA621 /* ErodeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC75CCBB1E8028E000ABA621 /* ErodeViewController.mm */; };
 		ECB2B5D81E764CCB00EAE841 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB2B5D71E764CCB00EAE841 /* main.m */; };
 		ECB2B5DB1E764CCB00EAE841 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB2B5DA1E764CCB00EAE841 /* AppDelegate.m */; };
 		ECB2B5DE1E764CCB00EAE841 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECB2B5DD1E764CCB00EAE841 /* ViewController.mm */; };
@@ -33,6 +36,12 @@
 		EC75CCAE1E7D905C00ABA621 /* drawTool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = drawTool.hpp; sourceTree = "<group>"; };
 		EC75CCB01E7E5E9000ABA621 /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
 		EC75CCB11E7E5E9000ABA621 /* TextViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TextViewController.mm; sourceTree = "<group>"; };
+		EC75CCB41E80155700ABA621 /* SmoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothViewController.h; sourceTree = "<group>"; };
+		EC75CCB51E80155700ABA621 /* SmoothViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SmoothViewController.mm; sourceTree = "<group>"; };
+		EC75CCB71E801FD700ABA621 /* ProcessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessViewController.h; sourceTree = "<group>"; };
+		EC75CCB81E801FD700ABA621 /* ProcessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessViewController.m; sourceTree = "<group>"; };
+		EC75CCBA1E8028E000ABA621 /* ErodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErodeViewController.h; sourceTree = "<group>"; };
+		EC75CCBB1E8028E000ABA621 /* ErodeViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ErodeViewController.mm; sourceTree = "<group>"; };
 		ECB2B5D31E764CCB00EAE841 /* opencv_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = opencv_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB2B5D71E764CCB00EAE841 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECB2B5D91E764CCB00EAE841 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +79,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC75CCB31E80152200ABA621 /* imgproc */ = {
+			isa = PBXGroup;
+			children = (
+				EC75CCB41E80155700ABA621 /* SmoothViewController.h */,
+				EC75CCB51E80155700ABA621 /* SmoothViewController.mm */,
+				EC75CCB71E801FD700ABA621 /* ProcessViewController.h */,
+				EC75CCB81E801FD700ABA621 /* ProcessViewController.m */,
+				EC75CCBA1E8028E000ABA621 /* ErodeViewController.h */,
+				EC75CCBB1E8028E000ABA621 /* ErodeViewController.mm */,
+			);
+			name = imgproc;
+			sourceTree = "<group>";
+		};
 		ECB2B5CA1E764CCB00EAE841 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +150,7 @@
 		ECB2B5F91E76A50E00EAE841 /* controls */ = {
 			isa = PBXGroup;
 			children = (
+				EC75CCB31E80152200ABA621 /* imgproc */,
 				ECB2B5FB1E76A8DA00EAE841 /* coremodel/function */,
 				ECB2B5F41E764D0000EAE841 /* IOSLinkViewController.h */,
 				ECB2B5F51E764D0000EAE841 /* IOSLinkViewController.mm */,
@@ -235,12 +258,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC75CCB61E80155700ABA621 /* SmoothViewController.mm in Sources */,
 				ECB2B5F71E764D0000EAE841 /* IOSLinkViewController.mm in Sources */,
 				EC75CCAF1E7D905C00ABA621 /* drawTool.cpp in Sources */,
 				ECB2B5FE1E76A92400EAE841 /* CoreViewController.m in Sources */,
+				EC75CCB91E801FD700ABA621 /* ProcessViewController.m in Sources */,
 				ECB2B5F61E764D0000EAE841 /* cvprocess.mm in Sources */,
 				ECB2B5DE1E764CCB00EAE841 /* ViewController.mm in Sources */,
 				EC75CCB21E7E5E9000ABA621 /* TextViewController.mm in Sources */,
+				EC75CCBC1E8028E000ABA621 /* ErodeViewController.mm in Sources */,
 				ECB2B5DB1E764CCB00EAE841 /* AppDelegate.m in Sources */,
 				EC75CCAC1E7D7A3200ABA621 /* DrawingViewController.mm in Sources */,
 				ECB2B5D81E764CCB00EAE841 /* main.m in Sources */,

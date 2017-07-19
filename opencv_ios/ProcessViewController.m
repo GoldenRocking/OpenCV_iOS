@@ -1,35 +1,35 @@
 //
-//  ViewController.m
+//  ProcessViewController.m
 //  opencv_ios
 //
-//  Created by guoruiqing on 2017/3/13.
+//  Created by guoruiqing on 2017/3/20.
 //  Copyright © 2017年 xhhl. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "IOSLinkViewController.h"
-#import "CoreViewController.h"
 #import "ProcessViewController.h"
+#import "SmoothViewController.h"
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ProcessViewController ()<UITableViewDelegate,UITableViewDataSource>
+
 
 @end
 
-@implementation ViewController
+@implementation ProcessViewController
 {
-  @private
+@private
     NSMutableArray *viewArray;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    [self.navigationController.navigationBar setTranslucent:NO];
-    self.title = @"OpenCV Learn";
+    // Do any additional setup after loading the view.
+    
+    self.title = @"Core Function";
     [self.navigationController.navigationBar setBarTintColor:[UIColor purpleColor]];
     
-    viewArray = [NSMutableArray arrayWithObjects:@"1.在ios平台的调用",@"2.core模块，核心功能",@"3.图像处理", nil];
-   
+    
+    viewArray = [NSMutableArray arrayWithObjects:@"1.平滑处理", nil];
+    
     
     UITableView *tableView=[[UITableView alloc]init];
     
@@ -39,6 +39,7 @@
     tableView.delegate=self;
     [self.view addSubview:tableView];
 }
+
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -80,40 +81,20 @@
     switch (indexPath.row)
     {
         case 0:
-            {
-            
-               IOSLinkViewController *viewC = [[IOSLinkViewController alloc]init];
-               [self.navigationController pushViewController:viewC animated:YES];
-               
-             
-            }
-            
-            break;
-            
-        case 1:
-            {
-            
-                CoreViewController *viewC = [[CoreViewController alloc]init];
-                [self.navigationController pushViewController:viewC animated:YES];
-                [tableView deselectRowAtIndexPath:indexPath animated:YES];
-            
-            }
-            
-            break;
-        case 2:
         {
-            
-            ProcessViewController *viewC = [[ProcessViewController alloc]init];
+            SmoothViewController *viewC = [[SmoothViewController alloc]init];
             [self.navigationController pushViewController:viewC animated:YES];
-            [tableView deselectRowAtIndexPath:indexPath animated:YES];
             
         }
             
             break;
             
+       
+            
+            
         default:
             break;
-        
+            
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -121,12 +102,19 @@
 }
 
 
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
